@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Wars Marketing Automation</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/enhanced.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-brain"></i>
+                    <span>Neural Wars Marketing</span>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-group">
+                        <a href="#dashboard" class="nav-link active" data-tab="dashboard">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="#dashboard/project" class="nav-sublink" data-file="PROJECT-DASHBOARD.md">
+                                <i class="fas fa-project-diagram"></i> Project Dashboard
+                            </a>
+                            <a href="#dashboard/performance" class="nav-sublink" data-file="PERFORMANCE-DASHBOARD.md">
+                                <i class="fas fa-chart-line"></i> Performance Dashboard
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <a href="#tasks" class="nav-link" data-tab="tasks">
+                            <i class="fas fa-tasks"></i> Tasks
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="#tasks/daily" class="nav-sublink" data-file="DAILY-TASK-SYSTEM.md">
+                                <i class="fas fa-calendar-day"></i> Daily Task System
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <a href="#templates" class="nav-link" data-tab="templates">
+                            <i class="fas fa-file-alt"></i> Templates
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="#templates/examples" class="nav-sublink" data-file="J-templates-examples.md">
+                                <i class="fas fa-images"></i> Content Examples
+                            </a>
+                            <a href="#templates/newsletter" class="nav-sublink" data-file="K-newsletter-templates.md">
+                                <i class="fas fa-envelope"></i> Newsletter Templates
+                            </a>
+                            <a href="#templates/press" class="nav-sublink" data-file="L-press-release-template.md">
+                                <i class="fas fa-newspaper"></i> Press Release
+                            </a>
+                            <a href="#templates/strategy" class="nav-sublink" data-file="M-content-strategy.md">
+                                <i class="fas fa-strategy"></i> Content Strategy
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <a href="#team" class="nav-link" data-tab="team">
+                            <i class="fas fa-users"></i> Team
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="#team/coordination" class="nav-sublink" data-file="TEAM-COORDINATION.md">
+                                <i class="fas fa-handshake"></i> Team Coordination
+                            </a>
+                            <a href="#team/roles" class="nav-sublink" data-file="O-team-roles-guide.md">
+                                <i class="fas fa-user-tag"></i> Team Roles Guide
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <a href="#campaign" class="nav-link" data-tab="campaign">
+                            <i class="fas fa-rocket"></i> Campaign
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="#campaign/execution" class="nav-sublink" data-file="CAMPAIGN-EXECUTION-GUIDE.md">
+                                <i class="fas fa-play-circle"></i> Execution Guide
+                            </a>
+                            <a href="#campaign/timeline" class="nav-sublink" data-file="O-master-launch-timeline.md">
+                                <i class="fas fa-timeline"></i> Launch Timeline
+                            </a>
+                            <a href="#campaign/optimization" class="nav-sublink" data-file="H-listing-optimization.md">
+                                <i class="fas fa-search-plus"></i> Listing Optimization
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <a href="#content" class="nav-link" data-tab="content">
+                            <i class="fas fa-edit"></i> Content
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="#content/homepage" class="nav-sublink" data-file="N-homepage-content.md">
+                                <i class="fas fa-home"></i> Homepage Content
+                            </a>
+                            <a href="#content/tracking" class="nav-sublink" data-file="I-performance-tracking-templates.md">
+                                <i class="fas fa-analytics"></i> Performance Tracking
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-group">
+                        <a href="#implementation" class="nav-link" data-tab="implementation">
+                            <i class="fas fa-cogs"></i> Implementation
+                        </a>
+                        <div class="nav-submenu">
+                            <a href="#implementation/complete" class="nav-sublink" data-file="IMPLEMENTATION-COMPLETE.md">
+                                <i class="fas fa-check-circle"></i> Implementation Complete
+                            </a>
+                            <a href="#implementation/readme" class="nav-sublink" data-file="MARKETING-IMPLEMENTATION-README.md">
+                                <i class="fas fa-book"></i> Implementation README
+                            </a>
+                            <a href="#implementation/getting-started" class="nav-sublink" data-file="PROJECT-GETTING-STARTED.md">
+                                <i class="fas fa-play"></i> Getting Started
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="#export" class="nav-link" data-tab="export">
+                        <i class="fas fa-download"></i> Export
+                    </a>
+                </div>
+                <div class="nav-status">
+                    <button class="btn btn-small" id="global-search-btn">
+                        <i class="fas fa-search"></i> Search Files
+                    </button>
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                        <span id="theme-text">Dark</span>
+                    </button>
+                    <span class="status-indicator online"></span>
+                    <span>Campaign Active</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Tab -->
+            <div id="dashboard-tab" class="tab-content active">
+                <div class="dashboard-header">
+                    <h1>Marketing Campaign Dashboard</h1>
+                    <div class="campaign-status">
+                        <span class="phase-badge" id="current-phase">Foundation Phase</span>
+                        <span class="days-counter" id="days-until-launch">90 days until launch</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Key Metrics -->
+                    <div class="card metrics-overview">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Key Metrics</h3>
+                            <button class="btn btn-small" id="refresh-metrics">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                        <div class="metrics-grid">
+                            <div class="metric-item">
+                                <div class="metric-value" id="sales-rank">#--</div>
+                                <div class="metric-label">Amazon BSR</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value" id="total-sales">--</div>
+                                <div class="metric-label">Total Sales</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value" id="review-count">--</div>
+                                <div class="metric-label">Reviews</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-value" id="email-subscribers">--</div>
+                                <div class="metric-label">Email Subscribers</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campaign Goals -->
+                    <div class="card campaign-goals">
+                        <div class="card-header">
+                            <h3><i class="fas fa-target"></i> Campaign Goals</h3>
+                            <button class="btn btn-small" onclick="toggleEditMode('campaign-goals')">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="goals-content">
+                            <div class="editable-field" data-field="sales-target">
+                                <label>Sales Target:</label>
+                                <span class="editable-content" contenteditable="false">_______________</span>
+                                <small class="edit-hint">Click Edit to modify</small>
+                            </div>
+                            <div class="editable-field" data-field="launch-date">
+                                <label>Launch Date:</label>
+                                <span class="editable-content" contenteditable="false">_______________</span>
+                                <small class="edit-hint">Click Edit to modify</small>
+                            </div>
+                            <div class="editable-field" data-field="budget">
+                                <label>Marketing Budget:</label>
+                                <span class="editable-content" contenteditable="false">$_______________</span>
+                                <small class="edit-hint">Click Edit to modify</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Status -->
+                    <div class="card team-status">
+                        <div class="card-header">
+                            <h3><i class="fas fa-users"></i> Team Status</h3>
+                        </div>
+                        <div class="team-members" id="team-status-list">
+                            <!-- Team status will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Weekly Progress -->
+                    <div class="card weekly-progress">
+                        <div class="card-header">
+                            <h3><i class="fas fa-calendar-week"></i> Weekly Progress</h3>
+                            <button class="btn btn-small" onclick="toggleEditMode('weekly-progress')">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="progress-overview" id="weekly-progress-content">
+                            <div class="progress-bar">
+                                <div class="progress-text">0 of 74 tasks completed (0%)</div>
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="editable-field" data-field="weekly-notes">
+                                <label>This Week's Focus:</label>
+                                <span class="editable-content" contenteditable="false">_______________</span>
+                                <small class="edit-hint">Click Edit to add notes</small>
+                            </div>
+                            <div class="editable-field" data-field="next-milestone">
+                                <label>Next Milestone:</label>
+                                <span class="editable-content" contenteditable="false">_______________</span>
+                                <small class="edit-hint">Click Edit to modify</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="card recent-activity">
+                        <div class="card-header">
+                            <h3><i class="fas fa-clock"></i> Recent Activity</h3>
+                        </div>
+                        <div class="activity-list" id="recent-activity-list">
+                            <!-- Activity items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks Tab -->
+            <div id="tasks-tab" class="tab-content">
+                <div class="tasks-header">
+                    <h1>Daily Task Management</h1>
+                    <div class="task-filters">
+                        <select id="person-filter">
+                            <option value="all">All Team Members</option>
+                            <option value="person1">Content Creator</option>
+                            <option value="person2">Community Manager</option>
+                            <option value="person3">Analytics Coordinator</option>
+                        </select>
+                        <select id="day-filter">
+                            <option value="all">All Days</option>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="tasks-grid">
+                    <!-- Person 1 Tasks -->
+                    <div class="person-tasks" id="person1-tasks">
+                        <h3><i class="fas fa-paintbrush"></i> Content Creator & Visual Designer</h3>
+                        <div class="task-list" id="person1-task-list">
+                            <!-- Tasks will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Person 2 Tasks -->
+                    <div class="person-tasks" id="person2-tasks">
+                        <h3><i class="fas fa-bullhorn"></i> Social Engagement & Community Manager</h3>
+                        <div class="task-list" id="person2-task-list">
+                            <!-- Tasks will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Person 3 Tasks -->
+                    <div class="person-tasks" id="person3-tasks">
+                        <h3><i class="fas fa-chart-bar"></i> Analytics, Advertising & Strategic Coordination</h3>
+                        <div class="task-list" id="person3-task-list">
+                            <!-- Tasks will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Templates Tab -->
+            <div id="templates-tab" class="tab-content">
+                <div class="templates-header">
+                    <h1>Marketing Templates</h1>
+                    <div class="template-actions">
+                        <button class="btn btn-primary" id="show-template-generator">
+                            <i class="fas fa-plus"></i> Generate Content
+                        </button>
+                    </div>
+                </div>
+
+                <div class="templates-grid">
+                    <div class="template-category" id="social-templates">
+                        <h3><i class="fas fa-share-alt"></i> Social Media Templates</h3>
+                        <div class="template-list" id="social-template-list">
+                            <!-- Templates will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="template-category" id="email-templates">
+                        <h3><i class="fas fa-envelope"></i> Email Templates</h3>
+                        <div class="template-list" id="email-template-list">
+                            <!-- Templates will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="template-category" id="press-templates">
+                        <h3><i class="fas fa-newspaper"></i> Press & Media Templates</h3>
+                        <div class="template-list" id="press-template-list">
+                            <!-- Templates will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Tab -->
+            <div id="team-tab" class="tab-content">
+                <div class="team-header">
+                    <h1>Team Coordination</h1>
+                    <div class="team-actions">
+                        <button class="btn btn-primary" onclick="logMeeting()">
+                            <i class="fas fa-calendar-plus"></i> Log Meeting
+                        </button>
+                        <button class="btn btn-secondary refresh-team-btn">
+                            <i class="fas fa-sync-alt"></i> Refresh Data
+                        </button>
+                    </div>
+                </div>
+
+                <div class="team-grid">
+                    <!-- Enhanced Team Members Section -->
+                    <div class="card team-members-section">
+                        <div class="card-header">
+                            <h3><i class="fas fa-users"></i> Team Members</h3>
+                            <button class="btn btn-small" onclick="window.teamManager && window.teamManager.loadTeamData()">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                        <div class="team-members-grid" id="team-members-container">
+                            <!-- Team members will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Team Statistics -->
+                    <div class="card team-statistics-section">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-pie"></i> Team Statistics</h3>
+                        </div>
+                        <div id="team-statistics-container">
+                            <!-- Statistics will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Progress Visualization -->
+                    <div class="card progress-charts-section">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-bar"></i> Progress Visualization</h3>
+                        </div>
+                        <div id="progress-charts-container">
+                            <!-- Charts will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Activity Log -->
+                    <div class="card activity-log-section">
+                        <div class="card-header">
+                            <h3><i class="fas fa-history"></i> Activity Log</h3>
+                        </div>
+                        <div id="activity-log-container">
+                            <!-- Activity log will be loaded here -->
+                        </div>
+                    </div>
+
+                    <!-- Original Team Roles Section (Collapsed by Default) -->
+                    <div class="card team-roles collapsed">
+                        <div class="card-header">
+                            <h3><i class="fas fa-user-friends"></i> Team Roles & Responsibilities</h3>
+                            <button class="btn btn-small" onclick="toggleAllRoles()">
+                                <i class="fas fa-expand-alt"></i> Expand All
+                            </button>
+                        </div>
+                        <div class="roles-content" id="team-roles-content">
+                            <!-- Enhanced expandable role sections -->
+                            <div class="role-section" data-role="content-creator">
+                                <div class="role-header" onclick="toggleRole('content-creator')">
+                                    <div class="role-title">
+                                        <i class="fas fa-paintbrush"></i>
+                                        <h4>Content Creator & Visual Designer</h4>
+                                        <span class="role-percentage">40% of team effort</span>
+                                    </div>
+                                    <div class="role-arrow">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="role-details hidden">
+                                    <div class="role-tabs">
+                                        <button class="tab-btn active" onclick="showRoleTab('content-creator', 'overview')">Overview</button>
+                                        <button class="tab-btn" onclick="showRoleTab('content-creator', 'daily')">Daily Tasks</button>
+                                        <button class="tab-btn" onclick="showRoleTab('content-creator', 'tools')">Tools & Resources</button>
+                                    </div>
+                                    <div class="role-tab-content">
+                                        <div class="tab-pane active" data-tab="overview">
+                                            <h5>Primary Responsibilities:</h5>
+                                            <ul>
+                                                <li><strong>Content Creation (60%):</strong> Website copy, social media graphics, videos, blog posts, newsletters, press materials</li>
+                                                <li><strong>Visual Design (40%):</strong> Social templates, promotional materials, brand consistency</li>
+                                            </ul>
+                                            <div class="editable-field" data-field="cc-notes">
+                                                <label>Current Focus:</label>
+                                                <span class="editable-content" contenteditable="false">_______________</span>
+                                                <small class="edit-hint">Click to edit</small>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" data-tab="daily">
+                                            <h5>Weekly Schedule:</h5>
+                                            <div class="daily-schedule">
+                                                <div class="day-item">
+                                                    <strong>Monday:</strong> Website updates, planning, blog posts
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Tuesday:</strong> Social media graphics (5 Instagram, 3 Twitter/X)
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Wednesday:</strong> Video content (2-3 TikToks, promotional videos)
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Thursday:</strong> Email marketing content, newsletters
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Friday:</strong> Week review, batch content creation
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" data-tab="tools">
+                                            <h5>Recommended Tools:</h5>
+                                            <ul>
+                                                <li>Canva Pro - Social media graphics</li>
+                                                <li>Adobe Creative Suite - Advanced design</li>
+                                                <li>Grammarly - Content editing</li>
+                                                <li>Buffer/Hootsuite - Social scheduling</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="role-section" data-role="community-manager">
+                                <div class="role-header" onclick="toggleRole('community-manager')">
+                                    <div class="role-title">
+                                        <i class="fas fa-bullhorn"></i>
+                                        <h4>Social Engagement & Community Manager</h4>
+                                        <span class="role-percentage">35% of team effort</span>
+                                    </div>
+                                    <div class="role-arrow">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="role-details hidden">
+                                    <div class="role-tabs">
+                                        <button class="tab-btn active" onclick="showRoleTab('community-manager', 'overview')">Overview</button>
+                                        <button class="tab-btn" onclick="showRoleTab('community-manager', 'daily')">Daily Tasks</button>
+                                        <button class="tab-btn" onclick="showRoleTab('community-manager', 'tools')">Tools & Resources</button>
+                                    </div>
+                                    <div class="role-tab-content">
+                                        <div class="tab-pane active" data-tab="overview">
+                                            <h5>Primary Responsibilities:</h5>
+                                            <ul>
+                                                <li><strong>Social Media Management:</strong> Daily posting, engagement, community building</li>
+                                                <li><strong>Influencer Relations:</strong> Outreach, partnerships, review coordination</li>
+                                                <li><strong>Community Building:</strong> Reader groups, forums, events</li>
+                                            </ul>
+                                            <div class="editable-field" data-field="cm-notes">
+                                                <label>Current Focus:</label>
+                                                <span class="editable-content" contenteditable="false">_______________</span>
+                                                <small class="edit-hint">Click to edit</small>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" data-tab="daily">
+                                            <h5>Daily Engagement Schedule:</h5>
+                                            <div class="daily-schedule">
+                                                <div class="day-item">
+                                                    <strong>Morning (9-11 AM):</strong> Social media posting and initial engagement
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Afternoon (2-4 PM):</strong> Community interaction, respond to comments
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Evening (6-8 PM):</strong> Influencer outreach, partnership follow-ups
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" data-tab="tools">
+                                            <h5>Recommended Tools:</h5>
+                                            <ul>
+                                                <li>Hootsuite/Buffer - Social scheduling</li>
+                                                <li>BuzzSumo - Influencer research</li>
+                                                <li>Goodreads - Book community engagement</li>
+                                                <li>Discord/Facebook Groups - Community management</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="role-section" data-role="analytics-coordinator">
+                                <div class="role-header" onclick="toggleRole('analytics-coordinator')">
+                                    <div class="role-title">
+                                        <i class="fas fa-chart-line"></i>
+                                        <h4>Analytics, Advertising & Strategic Coordination</h4>
+                                        <span class="role-percentage">25% of team effort</span>
+                                    </div>
+                                    <div class="role-arrow">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="role-details hidden">
+                                    <div class="role-tabs">
+                                        <button class="tab-btn active" onclick="showRoleTab('analytics-coordinator', 'overview')">Overview</button>
+                                        <button class="tab-btn" onclick="showRoleTab('analytics-coordinator', 'daily')">Daily Tasks</button>
+                                        <button class="tab-btn" onclick="showRoleTab('analytics-coordinator', 'tools')">Tools & Resources</button>
+                                    </div>
+                                    <div class="role-tab-content">
+                                        <div class="tab-pane active" data-tab="overview">
+                                            <h5>Primary Responsibilities:</h5>
+                                            <ul>
+                                                <li><strong>Analytics & Reporting:</strong> Performance tracking, data analysis, ROI measurement</li>
+                                                <li><strong>Advertising Management:</strong> Amazon ads, social media ads, budget optimization</li>
+                                                <li><strong>Strategic Coordination:</strong> Team management, timeline oversight, goal tracking</li>
+                                            </ul>
+                                            <div class="editable-field" data-field="ac-notes">
+                                                <label>Current Focus:</label>
+                                                <span class="editable-content" contenteditable="false">_______________</span>
+                                                <small class="edit-hint">Click to edit</small>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" data-tab="daily">
+                                            <h5>Weekly Analytics Schedule:</h5>
+                                            <div class="daily-schedule">
+                                                <div class="day-item">
+                                                    <strong>Monday:</strong> Weekend performance review, week planning
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Wednesday:</strong> Mid-week metrics check, ad optimization
+                                                </div>
+                                                <div class="day-item">
+                                                    <strong>Friday:</strong> Weekly report generation, team coordination
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" data-tab="tools">
+                                            <h5>Recommended Tools:</h5>
+                                            <ul>
+                                                <li>Google Analytics - Website tracking</li>
+                                                <li>Amazon KDP Reports - Sales analytics</li>
+                                                <li>Facebook Ads Manager - Social advertising</li>
+                                                <li>Asana/Monday - Project management</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card meeting-log">
+                        <div class="card-header">
+                            <h3><i class="fas fa-comments"></i> Meeting Log</h3>
+                        </div>
+                        <div class="meetings-list" id="meetings-list">
+                            <!-- Meetings will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Export Tab -->
+            <div id="export-tab" class="tab-content">
+                <div class="export-header">
+                    <h1>Export & Integration</h1>
+                    <p>Export your marketing data to various formats and integrate with external tools.</p>
+                </div>
+
+                <div class="export-grid">
+                    <div class="card export-documents">
+                        <div class="card-header">
+                            <h3><i class="fas fa-file-pdf"></i> Professional Documents</h3>
+                        </div>
+                        <div class="export-options">
+                            <button class="btn btn-success" data-export="campaign-report" data-format="pdf" title="Complete campaign overview">
+                                <i class="fas fa-chart-line"></i> Campaign Report PDF
+                            </button>
+                            <button class="btn btn-success" data-export="team-guide" data-format="pdf" title="Team roles and responsibilities">
+                                <i class="fas fa-users"></i> Team Guide PDF
+                            </button>
+                            <button class="btn btn-success" data-export="timeline" data-format="pdf" title="Launch timeline and milestones">
+                                <i class="fas fa-calendar-alt"></i> Timeline PDF
+                            </button>
+                            <button class="btn btn-success" data-export="all-docs" data-format="pdf" title="Complete documentation package">
+                                <i class="fas fa-file-archive"></i> Complete Package PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card export-templates">
+                        <div class="card-header">
+                            <h3><i class="fas fa-file-export"></i> Export Templates</h3>
+                        </div>
+                        <div class="export-options">
+                            <button class="btn btn-primary" data-export="templates" data-format="json">
+                                <i class="fas fa-code"></i> JSON
+                            </button>
+                            <button class="btn btn-primary" data-export="templates" data-format="csv">
+                                <i class="fas fa-table"></i> CSV
+                            </button>
+                            <button class="btn btn-primary" data-export="templates" data-format="markdown">
+                                <i class="fas fa-markdown"></i> Markdown
+                            </button>
+                            <button class="btn btn-success" data-export="templates" data-format="pdf" title="Professional PDF with branding">
+                                <i class="fas fa-file-pdf"></i> Professional PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card export-tasks">
+                        <div class="card-header">
+                            <h3><i class="fas fa-tasks"></i> Export Tasks</h3>
+                        </div>
+                        <div class="export-options">
+                            <button class="btn btn-primary" data-export="tasks" data-format="json">
+                                <i class="fas fa-code"></i> JSON
+                            </button>
+                            <button class="btn btn-primary" data-export="tasks" data-format="csv">
+                                <i class="fas fa-table"></i> CSV
+                            </button>
+                            <button class="btn btn-primary" data-export="tasks" data-format="markdown">
+                                <i class="fas fa-markdown"></i> Markdown
+                            </button>
+                            <button class="btn btn-success" data-export="tasks" data-format="pdf" title="Professional PDF with branding">
+                                <i class="fas fa-file-pdf"></i> Professional PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card export-team">
+                        <div class="card-header">
+                            <h3><i class="fas fa-users"></i> Export Team Data</h3>
+                        </div>
+                        <div class="export-options">
+                            <button class="btn btn-primary" data-export="team-data" data-format="json">
+                                <i class="fas fa-code"></i> JSON
+                            </button>
+                            <button class="btn btn-primary" data-export="team-data" data-format="csv">
+                                <i class="fas fa-table"></i> CSV
+                            </button>
+                            <button class="btn btn-primary" data-export="team-data" data-format="markdown">
+                                <i class="fas fa-markdown"></i> Markdown
+                            </button>
+                            <button class="btn btn-success" data-export="team-stats" data-format="json" title="Team statistics and performance data">
+                                <i class="fas fa-chart-bar"></i> Statistics Only
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card external-integrations">
+                        <div class="card-header">
+                            <h3><i class="fas fa-plug"></i> External Integrations</h3>
+                        </div>
+                        <div class="integration-options">
+                            <button class="btn btn-secondary" data-integration="google-workspace">
+                                <i class="fab fa-google"></i> Google Workspace
+                            </button>
+                            <button class="btn btn-secondary" data-integration="asana">
+                                <i class="fas fa-project-diagram"></i> Asana
+                            </button>
+                            <button class="btn btn-secondary" data-integration="slack">
+                                <i class="fab fa-slack"></i> Slack
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Tab -->
+            <div id="campaign-tab" class="tab-content">
+                <div class="campaign-header">
+                    <h1>Campaign Management</h1>
+                    <div class="campaign-controls">
+                        <button class="btn btn-primary" onclick="expandAllPhases()">
+                            <i class="fas fa-expand-alt"></i> Expand All Phases
+                        </button>
+                        <button class="btn btn-secondary" onclick="showCampaignOverview()">
+                            <i class="fas fa-chart-gantt"></i> Overview
+                        </button>
+                    </div>
+                </div>
+                <div class="campaign-content">
+                    <div class="campaign-overview">
+                        <div class="campaign-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">9 months</div>
+                                <div class="stat-label">Total Duration</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">3 people</div>
+                                <div class="stat-label">Team Size</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">$1,500-3,000</div>
+                                <div class="stat-label">Budget Range</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">15-20h/week</div>
+                                <div class="stat-label">Per Person</div>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-current">
+                            <h3>Current Phase: Foundation Setup</h3>
+                            <div class="editable-field" data-field="current-phase-notes">
+                                <label>Phase Notes:</label>
+                                <span class="editable-content" contenteditable="false">_______________</span>
+                                <small class="edit-hint">Click to add phase-specific notes</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-container">
+                        <!-- Phase 1: Foundation -->
+                        <div class="phase-section" data-phase="foundation">
+                            <div class="phase-header" onclick="togglePhase('foundation')">
+                                <div class="phase-info">
+                                    <div class="phase-number">1</div>
+                                    <div class="phase-details">
+                                        <h3>Foundation & Pre-Launch</h3>
+                                        <span class="phase-duration">Months 1-3</span>
+                                    </div>
+                                    <div class="phase-status current">Current Phase</div>
+                                </div>
+                                <div class="phase-arrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="phase-content hidden">
+                                <div class="month-sections">
+                                    <div class="month-section" data-month="1">
+                                        <div class="month-header" onclick="toggleMonth('foundation', '1')">
+                                            <h4><i class="fas fa-calendar-alt"></i> Month 1: Infrastructure Setup</h4>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="month-content hidden">
+                                            <div class="week-grid">
+                                                <div class="week-item">
+                                                    <h5>Week 1: Platform Creation</h5>
+                                                    <div class="task-summary">
+                                                        <span class="tasks-count">15 tasks</span>
+                                                        <span class="completion-rate">0% complete</span>
+                                                    </div>
+                                                </div>
+                                                <div class="week-item">
+                                                    <h5>Week 2: Content Development</h5>
+                                                    <div class="task-summary">
+                                                        <span class="tasks-count">12 tasks</span>
+                                                        <span class="completion-rate">0% complete</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="editable-field" data-field="month-1-notes">
+                                                <label>Month 1 Notes:</label>
+                                                <span class="editable-content" contenteditable="false">_______________</span>
+                                                <small class="edit-hint">Track progress and challenges</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="month-section" data-month="2">
+                                        <div class="month-header" onclick="toggleMonth('foundation', '2')">
+                                            <h4><i class="fas fa-calendar-alt"></i> Month 2: Content Creation</h4>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="month-content hidden">
+                                            <div class="week-grid">
+                                                <div class="week-item">
+                                                    <h5>Week 1: Social Media Content</h5>
+                                                    <div class="task-summary">
+                                                        <span class="tasks-count">18 tasks</span>
+                                                        <span class="completion-rate">0% complete</span>
+                                                    </div>
+                                                </div>
+                                                <div class="week-item">
+                                                    <h5>Week 2: Press & Media</h5>
+                                                    <div class="task-summary">
+                                                        <span class="tasks-count">10 tasks</span>
+                                                        <span class="completion-rate">0% complete</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="month-section" data-month="3">
+                                        <div class="month-header" onclick="toggleMonth('foundation', '3')">
+                                            <h4><i class="fas fa-calendar-alt"></i> Month 3: Launch Preparation</h4>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="month-content hidden">
+                                            <div class="week-grid">
+                                                <div class="week-item">
+                                                    <h5>Final Preparations</h5>
+                                                    <div class="task-summary">
+                                                        <span class="tasks-count">20 tasks</span>
+                                                        <span class="completion-rate">0% complete</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 2: Launch -->
+                        <div class="phase-section" data-phase="launch">
+                            <div class="phase-header" onclick="togglePhase('launch')">
+                                <div class="phase-info">
+                                    <div class="phase-number">2</div>
+                                    <div class="phase-details">
+                                        <h3>Launch Week</h3>
+                                        <span class="phase-duration">7 days intensive</span>
+                                    </div>
+                                    <div class="phase-status upcoming">Upcoming</div>
+                                </div>
+                                <div class="phase-arrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="phase-content hidden">
+                                <div class="launch-timeline">
+                                    <h4>Critical Launch Activities</h4>
+                                    <div class="critical-tasks">
+                                        <div class="critical-item">
+                                            <strong>Day -1:</strong> Final review and preparation
+                                        </div>
+                                        <div class="critical-item">
+                                            <strong>Day 0:</strong> Book goes live, social media blitz
+                                        </div>
+                                        <div class="critical-item">
+                                            <strong>Day +3:</strong> Review outreach and feedback collection
+                                        </div>
+                                        <div class="critical-item">
+                                            <strong>Day +7:</strong> Week 1 performance analysis
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 3: Post-Launch -->
+                        <div class="phase-section" data-phase="post-launch">
+                            <div class="phase-header" onclick="togglePhase('post-launch')">
+                                <div class="phase-info">
+                                    <div class="phase-number">3</div>
+                                    <div class="phase-details">
+                                        <h3>Post-Launch Momentum</h3>
+                                        <span class="phase-duration">6 months</span>
+                                    </div>
+                                    <div class="phase-status future">Future</div>
+                                </div>
+                                <div class="phase-arrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="phase-content hidden">
+                                <div class="momentum-activities">
+                                    <h4>Sustained Marketing Activities</h4>
+                                    <ul>
+                                        <li>Ongoing social media engagement</li>
+                                        <li>Series development and planning</li>
+                                        <li>Community building and events</li>
+                                        <li>Performance optimization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Tab -->
+            <div id="content-tab" class="tab-content">
+                <div class="content-header">
+                    <h1>Content Management</h1>
+                    <div class="content-controls">
+                        <input type="text" id="content-search" placeholder="Search content..." class="search-input">
+                        <button class="btn btn-primary" id="create-content">
+                            <i class="fas fa-plus"></i> Create Content
+                        </button>
+                    </div>
+                </div>
+                <div class="content-grid">
+                    <div class="content-sidebar">
+                        <div class="content-categories" id="content-categories">
+                            <!-- Categories will be loaded here -->
+                        </div>
+                    </div>
+                    <div class="content-main">
+                        <div class="file-viewer" id="content-file-viewer">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Tab -->
+            <div id="implementation-tab" class="tab-content">
+                <div class="implementation-header">
+                    <h1>Implementation Guide</h1>
+                    <div class="implementation-status">
+                        <span class="status-badge complete">Setup Complete</span>
+                        <button class="btn btn-primary" id="check-implementation">
+                            <i class="fas fa-check-double"></i> Verify Setup
+                        </button>
+                    </div>
+                </div>
+                <div class="implementation-content">
+                    <div class="implementation-grid">
+                        <div class="card implementation-checklist">
+                            <div class="card-header">
+                                <h3><i class="fas fa-clipboard-check"></i> Implementation Checklist</h3>
+                            </div>
+                            <div class="checklist-content" id="implementation-checklist">
+                                <!-- Checklist will be loaded here -->
+                            </div>
+                        </div>
+                        <div class="card implementation-docs">
+                            <div class="card-header">
+                                <h3><i class="fas fa-book"></i> Documentation</h3>
+                            </div>
+                            <div class="docs-list" id="implementation-docs">
+                                <!-- Documentation links will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Enhanced File Viewer Modal -->
+        <div id="file-viewer-modal" class="modal hidden">
+            <div class="modal-content large">
+                <div class="modal-header">
+                    <h3 id="file-viewer-title">File Viewer</h3>
+                    <div class="file-controls">
+                        <button class="btn btn-small" id="copy-file-content">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button class="btn btn-small" id="edit-file-content">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-small" id="export-file-content">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                        <button class="modal-close btn btn-secondary" id="file-modal-close" title="Back to Dashboard (ESC)">
+                            <i class="fas fa-times"></i> Back to Dashboard
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="file-viewer-content">
+                        <div class="file-sections" id="file-sections">
+                            <!-- File sections with expand/collapse -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced Search Modal -->
+        <div id="search-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Search Marketing Files</h3>
+                    <button class="modal-close btn btn-secondary" id="search-modal-close" title="Back to Dashboard (ESC)">
+                        <i class="fas fa-times"></i> Back to Dashboard
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="search-form">
+                        <input type="text" id="global-search" placeholder="Search across all files..." class="search-input-large">
+                        <button class="btn btn-primary" id="perform-search">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    <div class="search-results" id="search-results">
+                        <!-- Search results will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading...</p>
+            </div>
+        </div>
+
+        <!-- Modal for Template Generator -->
+        <div id="template-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Generate Content from Template</h3>
+                    <button class="modal-close btn btn-secondary" id="modal-close-btn" title="Back to Dashboard (ESC)">
+                        <i class="fas fa-times"></i> Back to Dashboard
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="template-generator-form">
+                        <div class="form-group">
+                            <label for="template-type">Template Type:</label>
+                            <select id="template-type" required>
+                                <option value="">Select a template type...</option>
+                                <!-- Options will be loaded dynamically -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="template-section">Section (optional):</label>
+                            <select id="template-section">
+                                <option value="">Use entire template</option>
+                                <!-- Options will be loaded based on template type -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Variables (optional):</label>
+                            <div id="template-variables">
+                                <!-- Variable inputs will be added dynamically -->
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Generate Content</button>
+                            <button type="button" class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/dataManager.js"></script>
+    <script src="/js/fileManager.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/tasks.js"></script>
+    <script src="/js/templates.js"></script>
+    <script src="/js/team.js"></script>
+    <script src="/js/export.js"></script>
+</body>
+</html>
